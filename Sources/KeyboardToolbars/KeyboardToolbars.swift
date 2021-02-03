@@ -1,12 +1,14 @@
 import SwiftUI
 import Combine
 
+//Extension to view to make applying modifier more natural
 extension View {
     public func addHideKeyboardButton() -> some View {
         self.modifier(HideKeyboardButtonOverlay())
     }
 }
 
+//Main modifier, detects when keyboard is open and then overlays the toolbar view
 struct HideKeyboardButtonOverlay: ViewModifier {
     
     #if os(iOS)
@@ -24,10 +26,8 @@ struct HideKeyboardButtonOverlay: ViewModifier {
     }
 }
 
-
-
+//Main toolbar view
 struct HideKeyboardButton: View {
-
     var body: some View {
         Button(action: {
             hideKeyboard()
@@ -43,7 +43,7 @@ struct HideKeyboardButton: View {
     }
 }
 
-
+//Modifier that changes opactity of toolbar when keyboard is opened.
 struct AdaptOpacityWithKeyboard: ViewModifier {
     
     let hideOnShow: Bool
@@ -79,6 +79,7 @@ struct AdaptOpacityWithKeyboard: ViewModifier {
     }
 }
 
+//Main function to hide keyboard
 #if canImport(UIKit)
 extension View {
     func hideKeyboard() {
