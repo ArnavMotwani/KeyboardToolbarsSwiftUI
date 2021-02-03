@@ -2,7 +2,7 @@ import SwiftUI
 import Combine
 
 extension View {
-    func addHideKeyboardButton() -> some View {
+    public func addHideKeyboardButton() -> some View {
         self.modifier(HideKeyboardButtonOverlay())
     }
 }
