@@ -1,11 +1,11 @@
 # KeyboardToolbars
 
+**A SwiftUI pacakge that makes adding floating toolbars to keyboards as simple as adding a single modifier.**
+
 ## Requirements:
 The package is only compatible with iOS 14 and iPadOS 14 for now.
 
-A SwiftUI pacakge that makes adding floating toolbars to keyboards as simple as adding a modifier.
-
-### Installation: 
+## Installation: 
 In Xcode go to `File -> Swift Packages -> Add Package Dependency` and paste in the repo's url: `https://github.com/ArnavMotwani/KeyboardToolbarsSwiftUI.git` then either select a version or the main branch (I will update the main branch more frequently with minor changes, while the version number will only increase with significant changes)
 
 ## Usage:
